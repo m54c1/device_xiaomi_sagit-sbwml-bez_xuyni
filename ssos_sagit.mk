@@ -22,10 +22,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/sagit/device.mk)
 
 # Inherit some common AOSP stuff.
-$(call inherit-product, vendor/ssos/config/common.mk)
+$(call inherit-product, vendor/ssos/config/common_full_phone.mk)
 
 # MiuiCamera
 $(call inherit-product-if-exists, vendor/apps/MiuiCamera/config.mk)
+
+# oplauncher
+$(call inherit-product, vendor/oplauncher/OPLauncher.mk)
 
 PRODUCT_NAME := ssos_sagit
 PRODUCT_DEVICE := sagit
